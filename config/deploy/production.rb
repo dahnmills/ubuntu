@@ -57,7 +57,7 @@
 # ------------------------------------
 server '192.168.1.14',
   user: 'root',
-  roles: %w{web app},
+  roles: %w{web app db},
   ssh_options: {
     user: 'root', # overrides user setting above
     keys: %w{/c/Users/Jeremy/.ssh/id_rsa},
