@@ -53,14 +53,13 @@
  #   auth_methods: %w(password)
  # }
 
- set :use_sudo, false
- 
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
 server '192.168.1.14',
   user: 'deployer',
   roles: %w{web app db},
+  use_sudo: false,
   ssh_options: {
     user: 'deployer', # overrides user setting above
     keys: %w{/c/Users/Jeremy/.ssh/id_rsa},
