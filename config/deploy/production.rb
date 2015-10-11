@@ -1,4 +1,4 @@
-set :stage, :production
+set :default_stage, "production"
 
 # role :app, %w{deployer@192.168.1.14}
 # role :web, %w{deployer@192.168.1.14}
