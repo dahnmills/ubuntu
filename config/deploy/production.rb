@@ -54,7 +54,6 @@
  # }
 #
 # The server-based syntax can be used to override options:
-set :use_sudo, false
 # ------------------------------------
 server '192.168.1.14',
   user: 'deployer',
@@ -62,7 +61,8 @@ server '192.168.1.14',
   ssh_options: {
     user: 'deployer', # overrides user setting above
     keys: %w{/c/Users/Jeremy/.ssh/id_rsa},
-    forward_agent: false,
+    forward_agent: true,
+    paranoid: true,
     auth_methods: %w(publickey password)
     # password: 'please use keys'
   }
