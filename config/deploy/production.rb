@@ -54,6 +54,7 @@
  # }
 #
 # The server-based syntax can be used to override options:
+set :use_sudo, true
 # ------------------------------------
 server '192.168.1.14',
   user: 'deployer',
