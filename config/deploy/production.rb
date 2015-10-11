@@ -49,11 +49,11 @@ server '192.168.1.14', user: 'deployer', roles: %w{web app}, ssh_options: {keys:
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+ set :ssh_options, {
+   keys: %w{/c/Users/Jeremy/.ssh/id_rsa},
+   forward_agent: false,
+   auth_methods: %w(password)
+ }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
