@@ -1,6 +1,11 @@
 set :stage, :production
 
-server '192.168.1.14', user: 'root', roles: %w{web app}
+role :app, %w{deployer@192.168.1.14}
+role :web, %w{deployer@192.168.1.14}
+role :db,  %w{deployer@192.168.1.14}
+
+server '192.168.1.14', user: 'deployer', roles: %w{web app}, ssh_options: {keys: %w{/c/Users/Jeremy/.ssh/id_rsa}, auth_methods: %w(publickey)}
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
