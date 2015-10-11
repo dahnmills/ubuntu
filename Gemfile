@@ -48,4 +48,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'capistrano', '~> 3.1'
 gem 'capistrano-rails', '~> 1.1'
 gem 'capistrano-bundler' 
-gem "net-ssh"
+# gem "net-ssh"
+gem 'sshkit'
