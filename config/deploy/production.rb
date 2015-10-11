@@ -52,6 +52,9 @@
  #   forward_agent: false,
  #   auth_methods: %w(password)
  # }
+
+ set :use_sudo, false
+ 
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
