@@ -38,9 +38,7 @@ set :deploy_to, '/home/deployer/ubuntu'
 # set :keep_releases, 5
 
 namespace :deploy do
-	task :restart do
-		run "touch #{current_path}/tmp/restart.txt"
-	end
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
 
