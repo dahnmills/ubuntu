@@ -53,4 +53,7 @@ gem 'sshkit'
 # gem 'capistrano-rvm'
 gem 'capistrano-rbenv', '~> 2.0'
 gem 'bcrypt-ruby'
-gem 'pg'
+
+group :production do
+	gem 'pg'
+end
