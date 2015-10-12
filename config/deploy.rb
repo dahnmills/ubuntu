@@ -5,6 +5,7 @@ set :application, 'ubuntu'
 set :repo_url, 'git://github.com/dahnmills/ubuntu.git'
 set :stage, :production
 set :passenger_restart_with_touch, true
+set :rake, 'bundle exec rake'
 set :rbenv_ruby, "2.2.0"
 
 # Default branch is :master
