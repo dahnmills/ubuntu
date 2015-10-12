@@ -6,7 +6,7 @@ set :repo_url, 'git://github.com/dahnmills/ubuntu.git'
 set :stage, :production
 
 require "capistrano-rbenv"
-set :rbenv_ruby_version, "2.2.0-p0"
+set :rbenv_ruby, "2.2.0-p0"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
