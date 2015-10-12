@@ -26,5 +26,5 @@ production:
   database: ubuntu_production
   pool: 5
   host: localhost
-  username: ubuntu
+  username: deployer
   password: groscon
