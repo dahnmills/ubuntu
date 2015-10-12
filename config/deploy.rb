@@ -4,6 +4,7 @@ lock '3.4.0'
 set :application, 'ubuntu'
 set :repo_url, 'git://github.com/dahnmills/ubuntu.git'
 set :stage, :production
+set :rbenv_ruby, '2.1.7'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
