@@ -55,6 +55,7 @@
 
 #
 # The server-based syntax can be used to override options:
+set :bundle_env_variables, { 'NOKOGIRI_USE_SYSTEM_LIBRARIES' => 1 }
 # ------------------------------------
 server '192.168.1.14',
   user: 'deployer',

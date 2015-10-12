@@ -10,7 +10,7 @@ set :rbenv_ruby, '2.1.7'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deployer/ubuntu'
-set :bundle_env_variables, { 'NOKOGIRI_USE_SYSTEM_LIBRARIES' => 1 }
+
 # Default value for :scm is :git
 # set :scm, :git
 
