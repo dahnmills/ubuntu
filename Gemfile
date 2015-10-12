@@ -50,3 +50,5 @@ gem 'capistrano-rails', '~> 1.1'
 gem 'capistrano-bundler' 
 # gem "net-ssh"
 gem 'sshkit'
+# gem 'capistrano-rvm'
+gem 'capistrano-rbenv', '~> 2.0'
