@@ -4,7 +4,7 @@ lock '3.4.0'
 set :application, 'ubuntu'
 set :repo_url, 'git://github.com/dahnmills/ubuntu.git'
 set :stage, :production
-
+set :passenger_restart_with_touch, true
 set :rbenv_ruby, "2.2.0"
 
 # Default branch is :master
@@ -38,14 +38,17 @@ set :deploy_to, '/home/deployer/ubuntu'
 # set :keep_releases, 5
 
 namespace :deploy do
+	task :restart do
+		run "touch #{current_path}/tmp/restart.txt"
+	end
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
 
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :touch, release_path.join('tmp/restart.txt')
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
     end
   end
 
-  after :publishing, 'deploy:restart'
-  after :finishing, 'deploy:cleanup'
 end
